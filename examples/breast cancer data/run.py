@@ -5,6 +5,7 @@ import sigopt.xgboost
 X, y = sklearn.datasets.load_breast_cancer(return_X_y=True)
 (Xtrain, Xtest, ytrain, ytest) = sklearn.model_selection.train_test_split(X, y, test_size=0.5, random_state=42)
 dtrain = xgboost.DMatrix(data=Xtrain, label=ytrain)
+# one test set
 ytest_pos_indices = numpy.where(ytest == 1)
 ytest_neg_indices = numpy.where(ytest == 0)
 Xtest_pos = Xtest[ytest_pos_indices,:][0]
