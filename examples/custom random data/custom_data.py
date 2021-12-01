@@ -18,7 +18,8 @@ arguments = {
 	"params": { 
 		"learning_rate": 0.3, 
 		"gamma": .5, 
-		"max_depth": 8 
+		"max_depth": 8,
+    "objective": "reg:squarederror"
 	}, 
 	"evals": [(dtest0, "dtest0"), (dtest1, "dtest1")]   
 } 
