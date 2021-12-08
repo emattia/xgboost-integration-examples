@@ -10,6 +10,6 @@ xgb_model_context = sigopt.xgboost.run(
     "objective": 'multi:softmax',
     "num_class": max(y) + 1
   },
-  run_options={"log_checkpoints": True}
+  evals=[(dtest, "ValidationSet")]
 ) 
 xgb_model_context.run.end()
